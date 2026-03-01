@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StarGather 🌌
 
-## Getting Started
+**Live shared observation log + instant professional sky map viewer for local astronomy clubs**
 
-First, run the development server:
+A quick weekend prototype built for the DEV.to Weekend Challenge ("build something community-focused").  
+Live demo: https://star-gather.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### What it does
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+StarGather lets astronomy club members (e.g., the Albuquerque Night Sky Club) quickly log what they saw under the night sky and instantly view any sighting in a real interactive planetarium-style map — powered by **Aladin Lite** from CDS.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Log sightings in seconds (object name + notes)
+- See a shared feed of recent observations from the group
+- Click any entry → full-screen Aladin sky map centers **exactly** on that object (M42, Jupiter, Betelgeuse, etc.)
+- All in the browser, no install, mobile-friendly, dark theme
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Why I built it
 
-## Learn More
+Local astronomy clubs thrive on shared excitement — "Hey, did you see that?" — but sightings are often scattered across texts, WhatsApp, or notebooks.  
+This tiny tool makes it trivial to log + visualize together, especially useful before/after star parties in dark-sky areas around Albuquerque.
 
-To learn more about Next.js, take a look at the following resources:
+### The party trick 🪄
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The magic is **Aladin Lite v3**[](https://aladin.cds.unistra.fr/AladinLite/), a lightweight embed used by professional astronomers.  
+It resolves common object names automatically and gives smooth panning/zooming.  
+Watching the map snap to exactly what someone just logged feels like having a mini planetarium in your pocket.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Tech stack (built in <2 hours)
 
-## Deploy on Vercel
+- Next.js 14 (App Router) + Tailwind CSS
+- Aladin Lite (vanilla JS embed via CDN — no npm!)
+- React state only (no backend/database for this MVP — everything local to the browser)
+- Deployed on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Screenshots
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Log form and feed](https://via.placeholder.com/800x450/111/eee?text=Feed+%26+Log+Form)  
+*Observation feed + quick-log form*
+
+![Aladin sky map modal](https://via.placeholder.com/800x450/000/fff?text=Aladin+Sky+Map+Modal)  
+*Click → real interactive sky map centered on the object*
+
+(Replace placeholders with actual screenshots once you take them!)
+
+### Try it yourself
+
+1. Visit https://star-gather.vercel.app
+2. Type an object name (e.g. "M42", "Jupiter", "M31 Andromeda")
+3. Add notes → Log It
+4. Click any card → watch the sky map appear!
+
+### Future ideas (if I keep going)
+
+- Supabase backend → real shared data across club members
+- Club invite codes / simple auth
+- Photo uploads tied to observations
+- Weather + moon phase hints for star party planning
+- Export logs to citizen science projects (AAVSO, etc.)
+
+Built for fun and the DEV Weekend Challenge — feedback / stars / forks very welcome!
+
+Made with ❤️ in Albuquerque, NM  
+Nick (@datadr1ven)
