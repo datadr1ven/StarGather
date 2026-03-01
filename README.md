@@ -39,11 +39,19 @@ StarGather brings logging and visualization together in one minimal, browser-bas
 
 ### Screenshots
 
-<image-card alt="Observation feed and logging form" src="images/log-screencap.png" ></image-card>
-*Shared feed with quick-log form*
+### Screenshots
 
-<image-card alt="Observation feed and logging form" src="images/aladin-view-screencap.png" ></image-card>
-*Clicking an observation opens the interactive sky map*
+<p align="center">
+  <img src="images/log-screencap.png" alt="Shared feed with quick-log form" width="700">
+  <br>
+  <em>Shared feed with quick-log form</em>
+</p>
+
+<p align="center">
+  <img src="images/aladin-view-screencap.png" alt="Clicking an observation opens the interactive sky map" width="700">
+  <br>
+  <em>Clicking an observation opens the interactive sky map</em>
+</p>
 
 ### Try it out
 
